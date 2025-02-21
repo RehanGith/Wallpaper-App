@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.my_wallpapers"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.my_wallpapers"
@@ -32,6 +32,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        //noinspection DataBindingWithoutKapt
+        dataBinding = true
     }
 }
 
