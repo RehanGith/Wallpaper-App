@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.dagger)
+    kotlin("kapt")
 }
 
 android {
@@ -40,6 +42,14 @@ android {
 }
 
 dependencies {
+    //dependencies for using dagger hilt
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.kapt)
+    //dependencies for retrofits
+    implementation(libs.android.retrofit.json)
+    implementation(libs.android.retrofit2)
+    //for loading images
+    implementation(libs.github.glide)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
