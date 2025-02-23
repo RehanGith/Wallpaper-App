@@ -10,6 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.my_wallpapers.R
 import com.example.my_wallpapers.databinding.FragmentRegisterBinding
+import com.example.my_wallpapers.model.User
 import com.example.my_wallpapers.util.RegisterValidation
 import com.example.my_wallpapers.util.Response
 import com.example.my_wallpapers.viewmodels.RegisterViewModel
@@ -20,11 +21,22 @@ import kotlinx.coroutines.launch
 class RegisterFragment: Fragment(R.layout.fragment_register) {
     private lateinit var binding: FragmentRegisterBinding
     private val registerViewModel by viewModels<RegisterViewModel>()
+    private lateinit var user: User
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentRegisterBinding.bind(view)
+        binding.buttonRegisterRegister.setOnClickListener {
+            binding.apply {
+                val firstName = edFirstNameRegister.text.toString().trim()
+                val lastName = edLastNameRegister.text.toString().trim()
+                val email = edEmailRegister.text.toString().trim()
+                user = User(firstName, lastName, email)
+                val password = edPasswordRegister.text.toString()
+                registerViewModel.createAccount(user.email, password)
+            }
 
+        }
         viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 registerViewModel.register.collect {
