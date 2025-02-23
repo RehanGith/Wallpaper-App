@@ -7,7 +7,9 @@ import androidx.navigation.fragment.findNavController
 
 import com.example.my_wallpapers.R
 import com.example.my_wallpapers.databinding.FragmentIntroductionBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class IntroductionFragment: Fragment(R.layout.fragment_introduction) {
     private lateinit var binding: FragmentIntroductionBinding
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

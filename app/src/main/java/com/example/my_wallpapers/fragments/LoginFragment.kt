@@ -1,5 +1,6 @@
 package com.example.my_wallpapers.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -12,6 +13,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.my_wallpapers.R
+import com.example.my_wallpapers.app.WallpaperActivity
 import com.example.my_wallpapers.databinding.FragmentLoginBinding
 import com.example.my_wallpapers.dialog.setUpBottomDialog
 import com.example.my_wallpapers.util.Response
@@ -45,7 +47,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 .build()
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment, null, navOption)
         }
-
         viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 loginViewModel.login.collect {
@@ -60,6 +61,13 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                         is Response.Success -> {
                             Log.d("LoginFragment", "onViewCreated Data: ${it.data}")
                             binding.buttonLoginLogin.revertAnimation()
+                            val intent = Intent(requireContext(), WallpaperActivity::class.java).apply {
+                                // These flags clear the existing task and start a new one
+                                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                            }
+                            startActivity(intent)
+
+                            requireActivity().finish()
                         }
                         is Response.UnSpecifies -> Unit
                     }

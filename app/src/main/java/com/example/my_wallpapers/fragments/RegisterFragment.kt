@@ -1,5 +1,6 @@
 package com.example.my_wallpapers.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.my_wallpapers.R
+import com.example.my_wallpapers.app.WallpaperActivity
 import com.example.my_wallpapers.databinding.FragmentRegisterBinding
 import com.example.my_wallpapers.model.User
 import com.example.my_wallpapers.util.RegisterValidation
@@ -60,6 +62,11 @@ class RegisterFragment: Fragment(R.layout.fragment_register) {
                         is Response.Success -> {
                             Log.d("RegisterFragment", it.data.toString())
                             binding.buttonRegisterRegister.revertAnimation()
+                            val intent = Intent(requireActivity(), WallpaperActivity::class.java).apply {
+                                flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                            }
+                            startActivity(intent)
+                            requireActivity().finish()
                         }
                         is Response.UnSpecifies -> Unit
                     }
