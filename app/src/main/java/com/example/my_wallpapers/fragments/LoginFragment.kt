@@ -24,8 +24,16 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentLoginBinding.bind(view)
+        binding.tvForgotPasswordLogin.setOnClickListener {
+            val email = binding.edEmailLogin.text.toString().trim()
+            loginViewModel.resetPassword(email)
+        }
+        binding.buttonLoginLogin.setOnClickListener {
+            val email = binding.edEmailLogin.text.toString().trim()
+            val password = binding.edPasswordLogin.text.toString()
 
-
+            loginViewModel.login(email, password)
+        }
         viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 loginViewModel.login.collect {
@@ -38,9 +46,23 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                             binding.buttonLoginLogin.startAnimation()
                         }
                         is Response.Success -> {
+                            Log.d("LoginFragment", "onViewCreated Data: ${it.data}")
                             binding.buttonLoginLogin.revertAnimation()
                         }
                         is Response.UnSpecifies -> Unit
+                    }
+                }
+            }
+        }
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                loginViewModel.resetPass.collect {
+                    when(it) {
+                        is Response.Failure -> TODO()
+                        is Response.Loading -> TODO()
+                        is Response.Success -> TODO()
+                        is Response.UnSpecifies -> TODO()
                     }
                 }
             }
