@@ -103,7 +103,7 @@
                 app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
                 app:layout_constraintTop_toBottomOf="@id/edEmailRegister" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <io.writeopia.loadingbutton.customViews.CircularProgressButton
                 android:id="@+id/buttonRegisterRegister"
                 style="@style/blueButtonStyle"
                 android:layout_width="0dp"

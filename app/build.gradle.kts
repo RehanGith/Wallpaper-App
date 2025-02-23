@@ -55,6 +55,11 @@ dependencies {
     implementation(libs.android.retrofit2)
     //for loading images
     implementation(libs.github.glide)
+    //for loading button
+    implementation(libs.androidx.loading.button)
+    //coroutine
+    implementation(libs.jetbrains.coroutine.core)
+    implementation(libs.jetbrains.coroutine.kotlinx)
     //navigation and viewModle
     implementation(libs.androidx.lifecyle.viewmodel)
     implementation(libs.androidx.navigation.ui)
