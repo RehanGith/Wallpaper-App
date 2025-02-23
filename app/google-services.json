@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "372069791598",
+    "project_id": "my-wallpapers-b0e83",
+    "storage_bucket": "my-wallpapers-b0e83.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372069791598:android:b89871e210646a9572b37f",
+        "android_client_info": {
+          "package_name": "com.example.my_wallpapers"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDksJKLA9MFaj11aYjw24bo-SgFSndd-aI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

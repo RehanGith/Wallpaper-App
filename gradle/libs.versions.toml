@@ -13,6 +13,11 @@ dagger= "2.50"
 hilt_android = "2.52"
 retrofit = "2.11.0"
 gl = "4.16.0"
+googleGmsGoogleServices = "4.4.2"
+firebaseAuth = "23.2.0"
+credentials = "1.3.0"
+credentialsPlayServicesAuth = "1.3.0"
+googleid = "1.1.1"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -27,7 +32,12 @@ dagger-kapt = { group = "com.google.dagger" ,name = "hilt-android-compiler" , ve
 android-retrofit2 = {group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit"}
 android-retrofit-json = {group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit"}
 github-glide = {group = "com.github.bumptech.glide", name = "glide", version.ref = "gl"}
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+androidx-credentials = { group = "androidx.credentials", name = "credentials", version.ref = "credentials" }
+androidx-credentials-play-services-auth = { group = "androidx.credentials", name = "credentials-play-services-auth", version.ref = "credentialsPlayServicesAuth" }
+googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 dagger = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }

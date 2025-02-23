@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.dagger)
     kotlin("kapt")
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -44,6 +45,10 @@ android {
 dependencies {
     //dependencies for using dagger hilt
     implementation(libs.dagger.hilt)
+    implementation(libs.firebase.auth)
+    implementation(libs.androidx.credentials)
+    implementation(libs.androidx.credentials.play.services.auth)
+    implementation(libs.googleid)
     kapt(libs.dagger.kapt)
     //dependencies for retrofits
     implementation(libs.android.retrofit.json)
