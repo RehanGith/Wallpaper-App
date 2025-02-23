@@ -53,6 +53,8 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                         is Response.Failure -> {
                             Log.d("LoginFragment", "onViewCreated: ${it.message}")
                             binding.buttonLoginLogin.revertAnimation()
+                            Toast.makeText(requireContext(), "Error: ${ it.message }", Toast.LENGTH_LONG).show()
+
                         }
                         is Response.Loading -> {
                             binding.buttonLoginLogin.startAnimation()
