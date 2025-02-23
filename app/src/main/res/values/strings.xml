@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">My_Wallpapers</string>
+    <string name="rightAddress">The Right Place\nFor Shopping\nAnyday</string>
+    <string name="qulity">It is now very easy to reach the\nbest quality among the\nproducts on the internet!</string>
+    <string name="left_image">left_image</string>
+    <string name="start">Start</string>
+    <string name="background">background</string>
+    <string name="shopping_s">My_Shopping\'s.</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="let_s_login">Let\'s Login</string>
+    <string name="don_t_have_an_account_register">Don\'t have an account? Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="facbook_login">facbook_login</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">google</string>
+    <string name="let_s_register">Let\'s Register</string>
+    <string name="do_you_have_an_account_log_in">Do you have an account? log in</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last name</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="we_will_send_you_the_password_reset_link_to_your_email">We will send you the password reset link to your email</string>
+    <string name="cancel">Cancel</string>
+    <string name="send">Send</string>
 </resources>
