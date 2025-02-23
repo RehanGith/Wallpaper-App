@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/left_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_texture_left"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineLeft"
+            app:layout_constraintDimensionRatio="1:3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ellips"
+            android:contentDescription="@string/left_image"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/horizontalGuidelineBottom"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/verticalGuidelineRight"
+            app:layout_constraintStart_toStartOf="@id/verticalGuidelineLeft"
+            app:layout_constraintTop_toTopOf="@id/guidelineLeft" />
+
+        <TextView
+            android:id="@+id/tvMyIntro"
+            style="@style/h4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tvRightAddressMargin"
+            android:gravity="center"
+            android:text="@string/rightAddress"
+            app:layout_constraintEnd_toEndOf="@id/verticalGuidelineRight"
+            app:layout_constraintStart_toStartOf="@id/verticalGuidelineLeft"
+            app:layout_constraintTop_toTopOf="@id/guidelineLeft" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnStart"
+            style="@style/blueButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tvMyIntro"
+            app:layout_constraintStart_toStartOf="@id/tvMyIntro"
+            app:layout_constraintTop_toBottomOf="@id/tvMyIntro" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/left_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_texture_left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/verticalGuidelineRight"
+            app:layout_constraintTop_toTopOf="@id/guidelineLeft" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalGuidelineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalGuidelineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuidelineBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
