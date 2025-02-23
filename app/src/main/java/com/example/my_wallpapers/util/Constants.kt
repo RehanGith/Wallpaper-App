@@ -5,5 +5,5 @@ object Constants {
     const val BASE_URL = "https://api.pexels.com/v1/"
     const val USER_COLLECTION = "user"
     const val INTRODUCTION_SP = "introductionSP"
-
+    const val INTRODUCTION_EN = "introductionEN"
 }
