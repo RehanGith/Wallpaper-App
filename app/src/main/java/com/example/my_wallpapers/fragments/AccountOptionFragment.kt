@@ -14,10 +14,10 @@ class AccountOptionFragment : Fragment(R.layout.fragment_account_option) {
         binding = FragmentAccountOptionBinding.bind(view)
 
         binding.btnLogin.setOnClickListener {
-
+            findNavController().navigate(R.id.action_accountOptionFragment_to_loginFragment)
         }
         binding.btnRegister.setOnClickListener {
-
+            findNavController().navigate(R.id.action_accountOptionFragment_to_registerFragment)
         }
     }
 }

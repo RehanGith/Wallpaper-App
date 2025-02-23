@@ -15,7 +15,7 @@ class IntroductionFragment: Fragment(R.layout.fragment_introduction) {
         binding = FragmentIntroductionBinding.bind(view)
 
         binding.btnStart.setOnClickListener {
-
+            findNavController().navigate(R.id.action_introductionFragment_to_accountOptionFragment)
         }
     }
 }

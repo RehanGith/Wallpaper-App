@@ -8,6 +8,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.NavOptions
+import androidx.navigation.fragment.findNavController
 import com.example.my_wallpapers.R
 import com.example.my_wallpapers.databinding.FragmentRegisterBinding
 import com.example.my_wallpapers.model.User
@@ -26,6 +28,13 @@ class RegisterFragment: Fragment(R.layout.fragment_register) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentRegisterBinding.bind(view)
+
+        binding.tvDoYouHaveAccount.setOnClickListener {
+            val navOption = NavOptions.Builder()
+                .setPopUpTo(R.id.registerFragment, true)
+                .build()
+            findNavController().navigate(R.id.action_registerFragment_to_loginFragment, null, navOption)
+        }
         binding.buttonRegisterRegister.setOnClickListener {
             binding.apply {
                 val firstName = edFirstNameRegister.text.toString().trim()

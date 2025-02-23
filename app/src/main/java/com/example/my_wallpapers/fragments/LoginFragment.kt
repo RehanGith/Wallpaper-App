@@ -9,6 +9,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.NavOptions
+import androidx.navigation.fragment.findNavController
 import com.example.my_wallpapers.R
 import com.example.my_wallpapers.databinding.FragmentLoginBinding
 import com.example.my_wallpapers.dialog.setUpBottomDialog
@@ -37,6 +39,13 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
             loginViewModel.login(email, password)
         }
+        binding.tvDontHaveAccount.setOnClickListener {
+            val navOption = NavOptions.Builder()
+                .setPopUpTo(R.id.loginFragment, true)
+                .build()
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment, null, navOption)
+        }
+
         viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 loginViewModel.login.collect {
