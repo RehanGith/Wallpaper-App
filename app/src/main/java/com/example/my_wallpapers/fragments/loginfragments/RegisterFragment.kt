@@ -1,4 +1,4 @@
-package com.example.my_wallpapers.fragments
+package com.example.my_wallpapers.fragments.loginfragments
 
 import android.content.Intent
 import android.os.Bundle

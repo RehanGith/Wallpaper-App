@@ -1,4 +1,4 @@
-package com.example.my_shoppings.fragments.login
+package com.example.my_wallpapers.fragments.loginfragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -43,11 +43,9 @@ class IntroductionFragment : Fragment(R.layout.fragment_introduction) {
                             startActivity(intent)
                             requireActivity().finish()
                         }
-
                         IntroductionViewModel.ACTION_OFTEN_FRAGMENT -> {
                             findNavController().navigate(it)
                         }
-
                         else -> Unit
                     }
                 }

@@ -1,4 +1,4 @@
-package com.example.my_shoppings.fragments.login
+package com.example.my_wallpapers.fragments.loginfragments
 
 import android.os.Bundle
 import android.view.View

@@ -1,4 +1,4 @@
-package com.example.my_wallpapers.fragments
+package com.example.my_wallpapers.fragments.loginfragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -19,7 +19,6 @@ import com.example.my_wallpapers.dialog.setUpBottomDialog
 import com.example.my_wallpapers.util.Response
 import com.example.my_wallpapers.viewmodels.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint

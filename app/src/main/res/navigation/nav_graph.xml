@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.my_wallpapers.fragments.RegisterFragment"
+        android:name="com.example.my_wallpapers.fragments.loginfragments.RegisterFragment"
         android:label="RegisterFragment"
         tools:layout="@layout/fragment_register">
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.my_wallpapers.fragments.LoginFragment"
+        android:name="com.example.my_wallpapers.fragments.loginfragments.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login">
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/introductionFragment"
-        android:name="com.example.my_shoppings.fragments.login.IntroductionFragment"
+        android:name="com.example.my_wallpapers.fragments.loginfragments.IntroductionFragment"
         android:label="IntroductionFragment"
         tools:layout="@layout/fragment_introduction">
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/accountOptionFragment"
-        android:name="com.example.my_shoppings.fragments.login.AccountOptionFragment"
+        android:name="com.example.my_wallpapers.fragments.loginfragments.AccountOptionFragment"
         android:label="AccountOptionFragment"
         tools:layout="@layout/fragment_account_option">
         <action
