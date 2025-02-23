@@ -33,7 +33,7 @@ class RegisterFragment: Fragment(R.layout.fragment_register) {
                 val email = edEmailRegister.text.toString().trim()
                 user = User(firstName, lastName, email)
                 val password = edPasswordRegister.text.toString()
-                registerViewModel.createAccount(user.email, password)
+                registerViewModel.createAccount(user, password)
             }
 
         }
