@@ -39,5 +39,4 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         binding.customeToolbar.title = "Wallpaper"
         (activity as AppCompatActivity).setSupportActionBar(binding.customeToolbar)
     }
-
 }

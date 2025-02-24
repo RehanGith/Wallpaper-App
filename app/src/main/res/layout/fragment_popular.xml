@@ -5,7 +5,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/purple_500"
+        android:background="@color/g_line"
         tools:context=".fragments.wallpaperfragments.PopularFragment">
 
         <!-- TODO: Update blank fragment layout -->
