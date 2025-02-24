@@ -79,4 +79,17 @@
         <item name="android:textSize">10sp</item>
         <item name="fontFamily">@font/sf_pro_display</item>
     </style>
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">0.1sp</item>
+        <item name="android:alpha">0.0</item>
+        <item name="android:fontFamily">@font/poppins_thin</item>
+        <item name="android:textStyle">bold</item>
+        <item name="actionTextColorAlpha">0</item>
+    </style>
+    <style name="Toolbar.TitleText.Expended" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/poppins</item>
+
+    </style>
+
 </resources>
